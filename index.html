@@ -1,0 +1,154 @@
+<!doctype html>
+<meta charset="utf-8" />
+
+<title>Blinking Lights – ACM at CSUF</title>
+<meta property="og:title" content="Blinking Lights – ACM at CSUF" />
+<meta property="og:image" content="assets/poster-2x.webp" />
+<meta
+  property="og:description"
+  content="Illuminate the ACM Tree with your Code"
+/>
+
+<link rel="icon" type="image/png" href="assets/christmas-tree.png" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://unpkg.com/normalize.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.fluid.classless.min.css"
+/>
+<link rel="stylesheet" href="./style.css" />
+
+<body data-theme="light">
+  <div class="background"></div>
+
+  <section id="intro">
+    <hgroup id="header">
+      <h4>
+        ACM at CSUF
+        <span style="font-weight: normal">presents</span>
+      </h4>
+      <h1>
+        <img src="assets/title.svg" alt="Blinking Lights" width="100%" />
+      </h1>
+    </hgroup>
+
+    <img
+      id="christmas-tree"
+      alt="Christmas Tree"
+      src="assets/christmas-tree.svg"
+    />
+
+    <h2>
+      <span class="gold-dark">Illuminate</span> the ACM
+      <span class="green-dark">Tree</span> with your
+      <span class="red-dark">Code</span>
+    </h2>
+
+    <h3>
+      <span class="green-dark">Friday, December 8th</span>
+      <br />
+      <span class="red-dark">3-6pm</span> at
+      <span class="red-dark">CS 300</span>
+    </h3>
+  </section>
+
+  <section id="about">
+    <p>
+      Come join us for a fun-filled event where you'll get to
+      <b>program LEDs on our Christmas tree to create a light show together</b>!
+    </p>
+    <p>
+      We'll also be decorating the tree with ornaments together, so feel free to
+      bring your own!
+    </p>
+  </section>
+
+  <section id="schedule">
+    <h2>Schedule</h2>
+    <table>
+      <tr>
+        <td>3:00pm</td>
+        <td>Event Opening and Tree Decorating</td>
+      </tr>
+      <tr>
+        <td>3:30pm</td>
+        <td>Coding Begins, SDK Introduction</td>
+      </tr>
+      <tr>
+        <td>5:30pm</td>
+        <td>Light Show Begins</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="sdk">
+    <h2>Development</h2>
+    <p>
+      For this event, we will supply you an SDK in
+      <span class="python">Python</span> and
+      <span class="javascript">JavaScript</span> to control the lights on the
+      tree.
+    </p>
+    <p>
+      If you're feeling smart, you may also choose to interfact with the tree
+      directly using Protobuf over Websocket. The server implementation
+      (including all definitions) can be found in
+      <a href="https://github.com/diamondburned/acm-christmas">
+        diamondburned/acm-christmas</a
+      >.
+    </p>
+    <p>
+      To test out your code, we will also provide you a simulator that will
+      display your code on a virtual tree. You'll also be able to acquire a
+      temporary token that lets you control the lights on the real tree for a
+      short while!
+    </p>
+    <div id="download-sdk">
+      <h3>Download the SDK</h3>
+      <p>To be released soon!</p>
+    </div>
+  </section>
+
+  <section id="architecture">
+    <h2>Architecture</h2>
+    <img src="assets/ACM Christmas Diagram.webp" alt="Architecture Diagram" />
+  </section>
+
+  <section id="contact" class="container qrcode-promo">
+    <h2>Come join us on Discord!</h2>
+    <img src="assets/acm-qr-t.png" alt="Discord QR Code" />
+    <p>
+      <a class="link" href="https://acmcsuf.com/discord" target="_blank">
+        acmcsuf.com/discord
+      </a>
+    </p>
+  </section>
+
+  <footer class="container">
+    <span>
+      An
+      <a href="https://acmcsuf.com" target="_blank">
+        <img src="assets/acm.svg" alt="ACM Logo" class="inline-emoji" />
+        ACM at CSUF
+      </a>
+      event
+    </span>
+    <span>
+      Source code on <a href="https://libdb.so/spookathon-site">GitHub</a>
+    </span>
+    <span>
+      <a
+        href="https://en.wikipedia.org/wiki/Transgender_rights_movement"
+        target="_blank"
+      >
+        Trans rights are human rights
+        <img
+          src="assets/trans-flag.svg"
+          alt="Transgender Flag"
+          class="inline-emoji"
+        />
+      </a>
+    </span>
+  </footer>
+</body>
