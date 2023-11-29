@@ -42,7 +42,7 @@
   --led-b: #2674ff;
 
   --background-base: #fff;
-  --background-shadow: 0 0 75vh rgba(119, 91, 0, 0.2) inset;
+  --background-shadow: 0 0 100vh rgba(119, 91, 0, 0.35) inset;
   --background-gradient: linear-gradient(
     to bottom,
     var(--background-gradient-1),
@@ -217,10 +217,12 @@ footer {
 
 .background {
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* Workaround for scuffed mobile navbars */
+  top: -100vh;
+  height: 200vh;
+  overflow: hidden;
 
   box-shadow: var(--background-shadow);
   z-index: -1;
@@ -302,6 +304,7 @@ footer {
 
 #architecture img {
   margin: 0 auto;
+  width: 100%;
   max-width: 500px;
 }
 
