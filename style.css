@@ -71,6 +71,7 @@
 
 :where(:root) {
   background: none !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -241,17 +242,51 @@ footer {
   filter: invert(1);
 }
 
-#intro {
-  margin: 0 auto;
-  padding-top: 2em;
-  box-sizing: border-box;
+#move-down {
+  width: 100%;
+  height: 5vh;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: inherit;
+}
+
+#move-down:hover,
+#move-down:focus,
+#move-down:active {
+  background: none;
+  text-decoration: none;
+}
+
+#move-down .material-icons {
+  font-size: 2em;
+}
+
+#intro {
+  margin: 0 auto;
+  padding: 2em 0;
+  box-sizing: border-box;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   max-width: 600px;
+  min-height: 100vh;
+}
 
-  height: 100%;
+#intro > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#intro #move-down {
+  position: absolute;
+  bottom: 0;
 }
 
 #intro h2 {

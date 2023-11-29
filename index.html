@@ -19,44 +19,64 @@
 />
 <link rel="stylesheet" href="./style.css" />
 
+<script>
+  // Assistive script for anchor-scrolling without changing the URL.
+  function handleAnchorClick(event) {
+    event.preventDefault();
+    const id = event.target.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+  }
+</script>
+
 <body data-theme="light">
   <div class="background"></div>
 
   <section id="intro">
-    <hgroup id="header">
-      <h4>
-        ACM at CSUF
-        <span style="font-weight: normal">presents</span>
-      </h4>
-      <h1>
-        <img src="assets/title.svg" alt="Blinking Lights" width="100%" />
-      </h1>
-    </hgroup>
+    <div>
+      <hgroup id="header">
+        <h4>
+          ACM at CSUF
+          <span style="font-weight: normal">presents</span>
+        </h4>
+        <h1>
+          <img src="assets/title.svg" alt="Blinking Lights" width="100%" />
+        </h1>
+      </hgroup>
 
-    <img
-      id="christmas-tree"
-      alt="Christmas Tree"
-      src="assets/christmas-tree.svg"
-    />
+      <img
+        id="christmas-tree"
+        alt="Christmas Tree"
+        src="assets/christmas-tree.svg"
+      />
 
-    <h2>
-      <span class="gold-dark">Illuminate</span> the ACM
-      <span class="green-dark">Tree</span> with your
-      <span class="red-dark">Code</span>
-    </h2>
+      <h2>
+        <span class="gold-dark">Illuminate</span> the ACM
+        <span class="green-dark">Tree</span> with your
+        <span class="red-dark">Code</span>
+      </h2>
 
-    <h3>
-      <span class="green-dark">Friday, December 8th</span>
-      <br />
-      <span class="red-dark">3-6pm</span> at
-      <span class="red-dark">CS 300</span>
-    </h3>
+      <h3>
+        <span class="green-dark">Friday, December 8th</span>
+        <br />
+        <span class="red-dark">3-6pm</span> at
+        <span class="red-dark">CS 300</span>
+      </h3>
+    </div>
+
+    <div id="content"></div>
+    <a id="move-down" href="#content" onclick="handleAnchorClick(event)">
+      <span class="material-icons">expand_more</span>
+    </a>
   </section>
 
   <section id="about">
     <p>
       Come join us for a fun-filled event where you'll get to
-      <b>program LEDs on our Christmas tree to create a light show together</b>!
+      <b>program LEDs on our tree to create a light show together</b>!
     </p>
     <p>
       We'll also be decorating the tree with ornaments together, so feel free to
