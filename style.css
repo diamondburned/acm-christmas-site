@@ -1,7 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"); */
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 @font-face {
   font-family: "Linotte";
   src:
@@ -48,8 +44,8 @@
     var(--background-gradient-1),
     var(--background-gradient-2)
   );
-  --background-gradient-1: rgba(255, 223, 149, 0.35);
-  --background-gradient-2: rgba(255, 149, 149, 0.3189);
+  --background-gradient-1: #fff4da;
+  --background-gradient-2: #ffdddd;
 
   --color: #424940;
   --h1-color: #232622;
@@ -70,8 +66,13 @@
 }
 
 :where(:root) {
-  background: none !important;
+  background-color: var(--background-gradient-2);
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -86,10 +87,9 @@ body {
   background-color: var(--background-base);
   background-image: var(--background-gradient);
 
-  margin: 0 auto;
+  margin: 0;
   padding: 0 1em;
 
-  max-width: 800px;
   width: 100%;
 }
 
@@ -97,6 +97,16 @@ body {
   body {
     --font-size: 1.15rem;
   }
+}
+
+header,
+footer,
+section {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  position: relative;
 }
 
 h1,
@@ -226,7 +236,7 @@ footer {
   overflow: hidden;
 
   box-shadow: var(--background-shadow);
-  z-index: -1;
+  z-index: 0;
 }
 
 .inline-icon,
@@ -266,8 +276,11 @@ footer {
 }
 
 #intro {
+  /* --icon-margin: max(1em, 5vh); */
+  --icon-margin: 1em;
+
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 1em 0;
   box-sizing: border-box;
 
   position: relative;
@@ -276,7 +289,7 @@ footer {
   justify-content: center;
 
   max-width: 600px;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 #intro > div {
@@ -289,8 +302,12 @@ footer {
   bottom: 0;
 }
 
+#intro hgroup {
+  margin-bottom: calc(var(--icon-margin) / 2);
+}
+
 #intro h2 {
-  margin-top: 2em;
+  margin-top: var(--icon-margin);
 }
 
 #intro h2,
@@ -299,8 +316,8 @@ footer {
 }
 
 #christmas-tree {
-  width: 80%;
-  max-width: 400px;
+  width: min(40vh, 80%);
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -329,6 +346,62 @@ footer {
   padding-right: 0;
   font-weight: 600;
   vertical-align: baseline;
+}
+
+#development .button-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5em;
+  margin: 0 auto;
+  max-width: 100%;
+  width: fit-content;
+}
+
+#development .button-section h3 {
+  text-align: center;
+  margin: 0;
+}
+
+#development .button-section h3:not(:first-child) {
+  margin-top: var(--spacing);
+}
+
+#development .button-section a {
+  --color: 245, 191, 18;
+
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 0.5em;
+
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(var(--color), 0.75);
+  color: var(--h1-color);
+}
+
+#development .button-section a:hover {
+  background-color: rgba(var(--color), 1);
+}
+
+#development .button-section a .label {
+  flex: 1;
+}
+
+#development .button-section .inline-icon,
+#development .button-section .inline-emoji {
+  --size: 1.75rem;
+
+  width: var(--size);
+  height: var(--size);
+  font-size: var(--size);
+
+  align-self: center;
+}
+
+#development .button-section img {
+  filter: contrast(0.75);
+  border-radius: 0.5rem;
 }
 
 #architecture {
